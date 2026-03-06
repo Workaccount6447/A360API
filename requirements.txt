@@ -11,3 +11,4 @@ aiohttp<3.13
 pycountry
 pydantic<2.0
 py-yt-search==0.2
+python-dotenv
