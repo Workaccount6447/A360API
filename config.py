@@ -1,16 +1,28 @@
-#Copyright @ISmartCoder
-#Updates Channel @abirxdhackz 
-API_ID = YOUR_API_ID
-API_HASH = "YOUR_API_HASH"
-BOT_TOKEN = "YOUR_BOT_TOKEN"
-TELE_ID = YOUR_API_ID
-TELE_HASH = "YOUR_API_HASH"
-IMGAI_API_KEY = "YOUR_IMAGE_API_KEY"
-OPENAI_API_KEY = "YOUR_OPENAI_API_KEY"
-REPLICATE_API_TOKEN = "YOUR_REPLICATE_API_TOKEN"
-GEMINI_API_KEY = "YOUR_GMINI_API_KEY"
-GROQ_API_KEY = "YOUR_GROK_API_KEY"
-SPOTIFY_CLIENT_ID = "YOUR_SPOTIFY_CLIENT_ID"
-SPOTIFY_CLIENT_SECRET = "YOUR_SPOTIFY_CLIENT_SECRET"
-BASE_URL = "This A360 API Base Url"
-MONGO_URL = "Your MongoDB Url"
+import os
+from dotenv import load_dotenv
+
+# Load the .env file
+load_dotenv()
+
+# Telegram Configuration
+API_ID = os.getenv("API_ID")
+API_HASH = os.getenv("API_HASH")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+TELE_ID = os.getenv("TELE_ID")
+TELE_HASH = os.getenv("TELE_HASH")
+
+# AI API Keys
+IMGAI_API_KEY = os.getenv("IMGAI_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+
+# Services & Database
+SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
+SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
+BASE_URL = os.getenv("BASE_URL")
+MONGO_URL = os.getenv("MONGO_URL")
+
+# Example usage:
+# print(f"Bot Token loaded: {BOT_TOKEN[:5]}***")
